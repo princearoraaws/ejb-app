@@ -39,7 +39,7 @@ public class CustomerAddressClient {
 			Properties jndiProperties = new Properties();
 			jndiProperties.put(Context.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.remote.client.InitialContextFactory");
 			jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
-			jndiProperties.put(Context.PROVIDER_URL, "http-remoting://localhost:8080");
+			jndiProperties.put(Context.PROVIDER_URL, "http-remoting://192.168.1.9:8080");
 			jndiProperties.put("jboss.naming.client.ejb.context", true);
 			initialContext = new InitialContext(jndiProperties);
 		}
@@ -57,7 +57,7 @@ public class CustomerAddressClient {
 		/*
 		 * The module name is the JAR name of the deployed EJB without the .jar suffix.
 		 */
-		String moduleName = "app.customer";
+		String moduleName = "customerapp";
 
 		/*
 		 * AS7 allows each deployment to have an (optional) distinct name. This can be
